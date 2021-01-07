@@ -1,0 +1,21 @@
+
+main > .container {
+    padding: 60px 15px 0;
+  }
+  
+  .footer {
+    background-color: #f5f5f5;
+  }
+  
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  code {
+    font-size: 80%;
+  }
+body{
+      background: rgb(140,0,227);
+      background: linear-gradient(90deg, rgba(140,0,227,1) 0%, rgba(168,27,168,1) 35%, rgba(238,231,78,1) 100%);
+    }
