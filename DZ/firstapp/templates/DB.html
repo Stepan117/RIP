@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные из нашей БД</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+{% block content%}
+<h1>Phone Brand</h1>
+{% if PhoneBrand %}
+<ul>
+{% for element in PhoneBrand %}
+<li>
+<a href="#">{{ element.Brand }}</a> ({{element.Site}})
+    <ul>{% for elem in element.phone_set.all %}
+        <li>
+            {{ elem.name }}
+            {{ elem.description }}
+        </li>
+    {% endfor %}
+    </ul>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>Error 404.There are no PhoneBrands.</p>
+{% endif %}
+{% endblock%}
+</body>
+</html>
